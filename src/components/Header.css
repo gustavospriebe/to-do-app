@@ -1,13 +1,11 @@
 header {
-    /* background-color: #ff0f */
     color: #fff;
     display: flex;
-    justify-content: space-between;
-    padding: 60px 50px;
-    max-width: 80%;
-    margin: 0 auto;
-    /* padding-top: 60px; */
+    padding: 60px 0;
     align-items: baseline;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
 }
 
 h2 {
@@ -29,7 +27,6 @@ img:hover {
 @media (max-width: 450px) {
     header {
         justify-content: space-between;
-        padding: 60px 1rem;
-        max-width: 100%;
+        width: 80%;
     }
 }

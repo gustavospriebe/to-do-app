@@ -3,7 +3,7 @@ import moon from "../assets/icon-moon.svg";
 import sun from "../assets/icon-sun.svg";
 import "./Header.css";
 
-export default function Header(props) {
+function Header(props) {
     const [button, setButton] = useState(moon);
 
     useEffect(() => {
@@ -17,3 +17,5 @@ export default function Header(props) {
         </header>
     );
 }
+
+export default Header;

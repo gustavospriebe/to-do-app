@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
+import NewTask from './components/NewTask';
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
@@ -18,7 +19,9 @@ function App() {
         <>
             <div className={appTheme}>
                 <Header handleChange={handleChange} darkMode={darkMode} />
+                <NewTask darkMode={darkMode} />
             </div>
+
         </>
     );
 }

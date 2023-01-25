@@ -1,0 +1,35 @@
+header {
+    /* background-color: #ff0f */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 50px;
+    max-width: 80%;
+    margin: 0 auto;
+    /* padding-top: 60px; */
+    align-items: baseline;
+}
+
+h2 {
+    font-size: 1.8rem;
+    letter-spacing: 0.8rem;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+    h2 {
+        font-size: 2rem;
+        letter-spacing: 0.9rem;
+    }
+}
+
+@media (max-width: 450px) {
+    header {
+        justify-content: space-between;
+        padding: 60px 1rem;
+        max-width: 100%;
+    }
+}

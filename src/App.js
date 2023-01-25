@@ -1,15 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import NewTask from './components/NewTask';
+import NewTask from "./components/NewTask";
+import Tasks from "./components/Tasks";
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
-    const [appTheme, setAppTheme] = useState("App");
-
-    useEffect(() => {
-        darkMode ? setAppTheme("App-dark") : setAppTheme("App");
-    }, [darkMode]);
 
     const handleChange = () => {
         setDarkMode(!darkMode);
@@ -17,11 +13,11 @@ function App() {
 
     return (
         <>
-            <div className={appTheme}>
+            <div className={darkMode ? "App-dark" : "App"}>
                 <Header handleChange={handleChange} darkMode={darkMode} />
                 <NewTask darkMode={darkMode} />
+                <Tasks darkMode={darkMode} />
             </div>
-
         </>
     );
 }

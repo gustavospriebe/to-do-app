@@ -1,5 +1,14 @@
 .tasks {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
+    background-color: #fff;
+    margin: 30px auto 0;
+    width: 60%;
+}
+
+
+@media (max-width: 450px) {
+    .tasks {
+        width: 80%;
+    }
 }

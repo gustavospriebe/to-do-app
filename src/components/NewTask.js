@@ -15,7 +15,7 @@ function Task({ darkMode, setTasks }) {
     };
 
     return (
-        <div className={darkMode ? "dark task-container" : "task-container"}>
+        <div className={darkMode ? "dark task-container new-task" : "task-container new-task"}>
             <button className={darkMode ? "dark" : ""}></button>
             <form
                 className={darkMode ? "dark form" : "form"}

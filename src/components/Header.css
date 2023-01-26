@@ -28,5 +28,6 @@ img:hover {
     header {
         justify-content: space-between;
         width: 80%;
+        padding: 80px 0;
     }
 }

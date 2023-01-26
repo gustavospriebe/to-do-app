@@ -1,4 +1,5 @@
 import Task from "./Task";
+import Buttons from "./Buttons";
 import "./Tasks.css";
 
 function Tasks({ darkMode, tasks }) {
@@ -6,9 +7,10 @@ function Tasks({ darkMode, tasks }) {
 
     return (
         <div className="tasks">
-            {tasks.map((task) => (
-                <Task key={task} task={task} darkMode={darkMode} />
+            {tasks.map((task, index) => (
+                <Task key={`${task}.${index}`} task={task} darkMode={darkMode} />
             ))}
+            {tasks.length > 0 && <Buttons />}
         </div>
     );
 }

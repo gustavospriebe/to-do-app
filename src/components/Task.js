@@ -1,17 +1,12 @@
-import './Task.css'
+import "./Task.css";
 
-function Task(props) {
-
-
+function Task({ darkMode, task }) {
+    console.log(task);
 
     return (
-        <div className={props.darkMode ? "task dark" : "task"} >
-            <button className={props.darkMode ? "dark" : ""}></button>
-            <input
-                className={props.darkMode ? "dark" : ""}
-                type="text"
-                placeholder="Create a new todo..."
-            />
+        <div className={darkMode ? "dark task-container" : "task-container"}>
+            <button className={darkMode ? "dark" : ""}></button>
+            <p className={darkMode ? "dark" : ""}>{task}</p>
         </div>
     );
 }

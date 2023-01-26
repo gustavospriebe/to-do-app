@@ -6,17 +6,20 @@ import Tasks from "./components/Tasks";
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
+    const [tasks, setTasks] = useState([]);
 
     const handleChange = () => {
         setDarkMode(!darkMode);
     };
 
+    console.log(tasks);
+
     return (
         <>
             <div className={darkMode ? "App-dark" : "App"}>
                 <Header handleChange={handleChange} darkMode={darkMode} />
-                <NewTask darkMode={darkMode} />
-                <Tasks darkMode={darkMode} />
+                <NewTask darkMode={darkMode} setTasks={setTasks} />
+                <Tasks darkMode={darkMode} tasks={tasks} />
             </div>
         </>
     );

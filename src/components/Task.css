@@ -1,12 +1,16 @@
-.task {
+.task-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: .6rem;
+    padding: 0.6rem;
     width: 60%;
     margin: 0 auto;
     background-color: #fff;
-    border-radius: .4rem;
+    border-radius: 0.4rem;
+}
+
+.form {
+    width: 100%;
 }
 
 .dark {
@@ -14,37 +18,60 @@
     color: hsl(235, 18%, 59%);
 }
 
-button.dark {
-
-    border: 2px solid rgba(255, 255, 255, 0.226);
-}
-
 button {
-    padding: 8px;
+    padding: 10px;
     margin-right: 8px;
     border-radius: 50%;
     border: 2px solid rgba(0, 0, 0, 0.137);
     background-color: #fff;
 }
 
-button:hover {
-    cursor: pointer;
+button.dark {
+    border: 2px solid rgba(255, 255, 255, 0.226);
 }
 
-input {
+/*  Botão clicado */
+/* button.completed, button.completed.dark {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    padding: 10px;
+    border: none;
+    background-image: url("../assets/icon-check.svg"), linear-gradient(hsl(192, 100%, 67%, .9) , hsl(280, 87%, 65%, 0.9));
+    background-position: center;
+} */
+
+/* Botão hover */
+button:hover,
+button.dark:hover {
+    cursor: pointer;
+
+    border-radius: 50px; /*1*/
+    border: 2px solid transparent; /*2*/
+    background: linear-gradient(
+            hsl(192, 100%, 67%, 0.9),
+            hsl(280, 87%, 65%, 0.9)
+        )
+        border-box; /*3*/
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; /*5'*/
+    mask-composite: exclude; /*5*/
+}
+
+input,
+p {
     padding: 5px;
     width: 100%;
     border: none;
     color: hsl(235, 19%, 35%);
-
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
 @media (max-width: 450px) {
-    form {
+    .oi {
         width: 80%;
     }
 }

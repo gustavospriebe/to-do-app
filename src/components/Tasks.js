@@ -1,12 +1,14 @@
 import Task from "./Task";
 import "./Tasks.css";
 
-function Tasks(props) {
+function Tasks({ darkMode, tasks }) {
+    console.log(tasks);
+
     return (
         <div className="tasks">
-            <Task darkMode={props.darkMode}/>
-            <Task darkMode={props.darkMode}/>
-            <Task darkMode={props.darkMode}/>
+            {tasks.map((task) => (
+                <Task key={task} task={task} darkMode={darkMode} />
+            ))}
         </div>
     );
 }

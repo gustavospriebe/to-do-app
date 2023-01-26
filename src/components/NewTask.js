@@ -1,19 +1,35 @@
-import "./NewTask.css";
+import { useState } from "react";
+import "./Task.css";
 
-function Task(props) {
+function Task({ darkMode, setTasks }) {
+    const [value, setValue] = useState("");
+
+    const handleChange = (e) => {
+        setValue(e.target.value);
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        setTasks((prevState) => [...prevState, value]);
+        setValue("");
     };
 
     return (
-        <form className={props.darkMode ? "dark" : ""} onSubmit={handleSubmit}>
-            <button className={props.darkMode ? "dark" : ""}></button>
-            <input
-                className={props.darkMode ? "dark" : ""}
-                type="text"
-                placeholder="Create a new todo..."
-            />
-        </form>
+        <div className={darkMode ? "dark task-container" : "task-container"}>
+            <button className={darkMode ? "dark" : ""}></button>
+            <form
+                className={darkMode ? "dark form" : "form"}
+                onSubmit={handleSubmit}
+            >
+                <input
+                    className={darkMode ? "dark" : ""}
+                    type="text"
+                    value={value}
+                    onChange={handleChange}
+                    placeholder="Create a new todo..."
+                />
+            </form>
+        </div>
     );
 }
 

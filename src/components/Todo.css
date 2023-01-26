@@ -14,7 +14,7 @@
 
 .App-dark {
     background-image: url("../assets/bg-desktop-dark.jpg");
-    background-color: hsl(235, 21%, 11%);
+    background-color: hsl(233, 22%, 14%);
 }
 
 @media (min-width: 1440px) {

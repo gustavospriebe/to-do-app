@@ -3,10 +3,23 @@
     align-items: center;
     justify-content: center;
     padding: 0.6rem;
-    width: 100%;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 0.4rem;
+}
+
+.task-container.task {
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.233);
+    border-radius: 0;
+}
+
+.task.dark {
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.233);
+}
+
+.task-container.task:first-child {
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
 }
 
 .new-task {
@@ -75,7 +88,7 @@ input:focus {
 }
 
 @media (max-width: 450px) {
-    .task-container, .new-task {
+    .new-task {
         width: 80%;
     }
 }

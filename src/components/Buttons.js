@@ -1,9 +1,15 @@
-import './Buttons.css'
+import "./Buttons.css";
+import { DarkModeContext } from "../context/DarkMode";
+import { useContext } from "react";
 
-function Buttons({tasks}) {
+function Buttons({ tasks }) {
+    const { darkMode } = useContext(DarkModeContext);
+
     return (
         <div className="buttons">
-            <p className="qty-tasks">2/{tasks.length} tasks done</p>
+            <p className={darkMode ? "qty-tasks dark" : "qty-tasks"}>
+                2/{tasks.length} tasks done
+            </p>
         </div>
     );
 }

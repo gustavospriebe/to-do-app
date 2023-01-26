@@ -2,10 +2,12 @@ import { createContext, useState } from "react";
 
 const DarkModeContext = createContext();
 
-function DarkModeProvider({children}) {
+function DarkModeProvider({ children }) {
     const [darkMode, setDarkModes] = useState(false);
 
     const toggleDarkMode = () => setDarkModes(!darkMode);
+
+    console.log(darkMode);
 
     return (
         <div>

@@ -1,19 +1,21 @@
 import { useState, useContext } from "react";
 import "./Task.css";
 import { DarkModeContext } from "../context/DarkMode";
+import { TasksContext } from "../context/TasksContext";
 
-function Task({ setTasks }) {
+function Task() {
     const [value, setValue] = useState("");
 
     const { darkMode } = useContext(DarkModeContext);
-    
+    const { handleTasks } = useContext(TasksContext);
+
     const handleChange = (e) => {
         setValue(e.target.value);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setTasks((prevState) => [...prevState, value]);
+        handleTasks(value);
         setValue("");
     };
 

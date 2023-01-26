@@ -3,7 +3,9 @@ import "./Todo.css";
 import Header from "./Header";
 import NewTask from "./NewTask";
 import Container from "./Container";
+import Footer from "./Footer";
 import { DarkModeContext } from "../context/DarkMode";
+import { TasksProvider } from "../context/TasksContext";
 
 function Todo() {
     const [tasks, setTasks] = useState([]);
@@ -14,10 +16,16 @@ function Todo() {
     return (
         <>
             <div className={darkMode ? "App-dark" : "App"}>
-                <Header />
-                <NewTask setTasks={setTasks} />
-                <Container tasks={tasks} complete={complete} setComplete={setComplete} />
-                
+                <TasksProvider>
+                    <Header />
+                    <NewTask />
+                    <Container
+                        tasks={tasks}
+                        complete={complete}
+                        setComplete={setComplete}
+                    />
+                    <Footer / >
+                </TasksProvider>
             </div>
         </>
     );

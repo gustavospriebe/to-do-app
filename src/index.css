@@ -11,3 +11,9 @@
   -moz-osx-font-smoothing: grayscale;
   font-size: 18px;
 }
+
+@media (min-width: 1440px) {
+  * {
+    font-size: 22px;
+  }
+}

@@ -2,10 +2,10 @@ import Task from "./Task";
 import "./Tasks.css";
 import { DarkModeContext } from "../context/DarkMode";
 import { useContext } from "react";
+import { TasksContext } from "../context/TasksContext";
 
-function Tasks({ tasks }) {
-
-    console.log(tasks)
+function Tasks() {
+    const { tasks } = useContext(TasksContext);
 
     const { darkMode } = useContext(DarkModeContext);
     return (

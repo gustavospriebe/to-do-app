@@ -1,9 +1,9 @@
 import './Buttons.css'
 
-function Buttons() {
+function Buttons({tasks}) {
     return (
         <div className="buttons">
-            <p>oi</p>
+            <p className="qty-tasks">2/{tasks.length} tasks done</p>
         </div>
     );
 }

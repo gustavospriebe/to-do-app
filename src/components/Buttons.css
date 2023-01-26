@@ -2,9 +2,102 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.6rem;
+    padding: 0.5rem;
     width: 60%;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 0.4rem;
+}
+
+.qty-tasks {
+    font-size: 0.7rem;
+}
+
+@media (max-width: 450px) {
+    .buttons {
+        width: 80%;
+    }
+}
+
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.4rem;
+}
+
+.new-task {
+    width: 60%;
+}
+
+.form {
+    width: 100%;
+}
+
+.dark {
+    background-color: hsl(237, 14%, 26%);
+    color: hsl(235, 18%, 59%);
+}
+
+button {
+    padding: 10px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.137);
+    background-color: #fff;
+}
+
+button.dark {
+    border: 2px solid rgba(255, 255, 255, 0.226);
+}
+
+/*  Botão clicado */
+/* button.completed, button.completed.dark {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    padding: 10px;
+    border: none;
+    background-image: url("../assets/icon-check.svg"), linear-gradient(hsl(192, 100%, 67%, .9) , hsl(280, 87%, 65%, 0.9));
+    background-position: center;
+} */
+
+/* Botão hover */
+button:hover,
+button.dark:hover {
+    cursor: pointer;
+
+    border-radius: 50px; /*1*/
+    border: 2px solid transparent; /*2*/
+    background: linear-gradient(
+            hsl(192, 100%, 67%, 0.9),
+            hsl(280, 87%, 65%, 0.9)
+        )
+        border-box; /*3*/
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; /*5'*/
+    mask-composite: exclude; /*5*/
+}
+
+input,
+p {
+    padding: 5px;
+    width: 100%;
+    border: none;
+    color: hsl(235, 19%, 35%);
+}
+
+input:focus {
+    outline: none;
+}
+
+@media (max-width: 450px) {
+    .task-container,
+    .new-task {
+        width: 80%;
+    }
 }

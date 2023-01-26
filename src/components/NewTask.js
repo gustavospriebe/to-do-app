@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Task.css";
+import { DarkModeContext } from "../context/DarkMode";
 
-function Task({ darkMode, setTasks }) {
+function Task({ setTasks }) {
     const [value, setValue] = useState("");
 
+    const { darkMode } = useContext(DarkModeContext);
+    
     const handleChange = (e) => {
         setValue(e.target.value);
     };
@@ -15,7 +18,13 @@ function Task({ darkMode, setTasks }) {
     };
 
     return (
-        <div className={darkMode ? "dark task-container new-task" : "task-container new-task"}>
+        <div
+            className={
+                darkMode
+                    ? "dark task-container new-task"
+                    : "task-container new-task"
+            }
+        >
             <button className={darkMode ? "dark" : ""}></button>
             <form
                 className={darkMode ? "dark form" : "form"}

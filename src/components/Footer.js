@@ -3,7 +3,8 @@ import './Footer.css'
 function Footer() {
     return (
         <footer>
-            <p>oi</p>
+            <p>footer</p>
+            <p>xau</p>
         </footer>
     );
 }

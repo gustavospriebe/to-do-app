@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import "./Todo.css";
 import Header from "./Header";
 import NewTask from "./NewTask";
@@ -8,9 +8,6 @@ import { DarkModeContext } from "../context/DarkMode";
 import { TasksProvider } from "../context/TasksContext";
 
 function Todo() {
-    const [tasks, setTasks] = useState([]);
-    const [complete, setComplete] = useState(false);
-
     const { darkMode } = useContext(DarkModeContext);
 
     return (
@@ -19,12 +16,8 @@ function Todo() {
                 <TasksProvider>
                     <Header />
                     <NewTask />
-                    <Container
-                        tasks={tasks}
-                        complete={complete}
-                        setComplete={setComplete}
-                    />
-                    <Footer / >
+                    <Container />
+                    <Footer />
                 </TasksProvider>
             </div>
         </>

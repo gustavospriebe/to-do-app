@@ -3,17 +3,42 @@ import { createContext, useState } from "react";
 const TasksContext = createContext();
 
 function TasksProvider({ children }) {
-    
     const [tasks, setTasks] = useState([]);
 
-    const handleTasks = (value) =>
-        setTasks((prevState) => [...prevState, value]);
+    const createTasks = (value) => {
+        setTasks((prevState) => [
+            ...prevState,
+            {
+                title: value,
+                completed: false,
+            },
+        ]);
+    };
 
-    console.log(tasks);
+    // const
+
+    const deleteTasks = (taskToDelete) => {
+        tasks.splice(taskToDelete, 1);
+
+        const newTasks = [...tasks];
+        newTasks.splice(taskToDelete, 0);
+        setTasks(newTasks);
+    };
+
+    const deleteAllTasks = (taskToDelete) => {
+        setTasks([]);
+    };
 
     return (
         <div>
-            <TasksContext.Provider value={{ tasks, handleTasks }}>
+            <TasksContext.Provider
+                value={{
+                    createTasks,
+                    deleteTasks,
+                    deleteAllTasks,
+                    tasks,
+                }}
+            >
                 {children}
             </TasksContext.Provider>
         </div>

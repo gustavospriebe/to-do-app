@@ -1,9 +1,15 @@
 import "./Task.css";
 import { DarkModeContext } from "../context/DarkMode";
+import { TasksContext } from "../context/TasksContext";
 import { useContext } from "react";
+import cross from "../assets/icon-cross.svg";
 
-function Task({ task }) {
+
+function Task({ task, index }) {
     const { darkMode } = useContext(DarkModeContext);
+    const { deleteTasks } = useContext(TasksContext);
+
+    console.log(task)
 
     return (
         <div
@@ -12,7 +18,8 @@ function Task({ task }) {
             }
         >
             <button className={darkMode ? "dark" : ""}></button>
-            <p className={darkMode ? "dark" : ""}>{task}</p>
+            <p className={darkMode ? "dark task-text" : "task-text"}>{task.title}</p>
+            <img onClick ={() => deleteTasks(index)} style={{width:'14px'}} src={cross} alt="x" />
         </div>
     );
 }

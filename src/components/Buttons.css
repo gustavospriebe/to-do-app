@@ -1,5 +1,5 @@
 .buttons {
-    /* display: flex; */
+    display: flex;
     margin: 0 auto;
     background-color: #fff;
     width: 100%;
@@ -10,9 +10,14 @@
     color: hsl(235, 18%, 59%);
 }
 
-.qty-tasks {
+.button {
+    width: 100%;
     font-size: 0.7rem;
     padding: 0.7rem;
+}
+
+.clean:hover {
+    cursor: pointer;
 }
 
 /* @media (max-width: 450px) {

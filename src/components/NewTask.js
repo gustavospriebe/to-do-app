@@ -7,7 +7,7 @@ function Task() {
     const [value, setValue] = useState("");
 
     const { darkMode } = useContext(DarkModeContext);
-    const { handleTasks } = useContext(TasksContext);
+    const { createTasks } = useContext(TasksContext);
 
     const handleChange = (e) => {
         setValue(e.target.value);
@@ -15,7 +15,10 @@ function Task() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        handleTasks(value);
+        if (value.length === 0) {
+            return;
+        }
+        createTasks(value);
         setValue("");
     };
 

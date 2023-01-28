@@ -10,6 +10,10 @@
     background-color: hsl(237, 14%, 26%);
     color: hsl(234, 21%, 63%);
 }
+.active-filter.dark {
+    text-decoration: underline;
+    font-weight: bold;
+}
 
 .button {
     /* width: 100%; */

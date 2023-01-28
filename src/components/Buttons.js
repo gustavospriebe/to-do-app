@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { DarkModeContext } from "../context/DarkMode";
 import { TasksContext } from "../context/TasksContext";
 import "./Buttons.css";
+import classNames from "classnames";
 
 function Buttons() {
     const { tasks, deleteAllTasks, getFilter, filter } =
@@ -23,33 +24,25 @@ function Buttons() {
                     >
                         <p
                             onClick={(e) => getFilter(e.target.innerHTML)}
-                            className={
-                                (darkMode
-                                    ? "button filter dark"
-                                    : "button filter") &&
-                                filter === "All" &&
-                                "active-filter"
-                            }
+                            className={`button filter ${
+                                darkMode ? "dark" : ""
+                            } ${filter === "All" ? "active-filter" : ""}`}
                         >
                             All
                         </p>
                         <p
                             onClick={(e) => getFilter(e.target.innerHTML)}
-                            className={
-                                darkMode
-                                    ? "button filter dark"
-                                    : filter === 'Active' ? "button filter active-filter" : "button filter"
-                            }
+                            className={`button filter ${
+                                darkMode ? "dark" : ""
+                            } ${filter === "Active" ? "active-filter" : ""}`}
                         >
                             Active
                         </p>
                         <p
                             onClick={(e) => getFilter(e.target.innerHTML)}
-                            className={
-                                darkMode
-                                    ? "button filter dark"
-                                    : filter === 'Completed' ? "button filter active-filter" : "button filter"
-                            }
+                            className={`button filter ${
+                                darkMode ? "dark" : ""
+                            } ${filter === "Completed" ? "active-filter" : ""}`}
                         >
                             Completed
                         </p>

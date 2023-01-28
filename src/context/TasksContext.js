@@ -36,6 +36,7 @@ function TasksProvider({ children }) {
 
     const getFilter = (event) => {
         setFilter(event);
+        
     };
 
     return (

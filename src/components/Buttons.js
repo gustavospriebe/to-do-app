@@ -8,8 +8,6 @@ function Buttons() {
         useContext(TasksContext);
     const { darkMode } = useContext(DarkModeContext);
 
-    const filterActive = () => {};
-
     return (
         <>
             {tasks.length > 0 && (
@@ -26,9 +24,11 @@ function Buttons() {
                         <p
                             onClick={(e) => getFilter(e.target.innerHTML)}
                             className={
-                                darkMode
+                                (darkMode
                                     ? "button filter dark"
-                                    : "button filter"
+                                    : "button filter") &&
+                                filter === "All" &&
+                                "active-filter"
                             }
                         >
                             All
@@ -38,7 +38,7 @@ function Buttons() {
                             className={
                                 darkMode
                                     ? "button filter dark"
-                                    : "button filter"
+                                    : filter === 'Active' ? "button filter active-filter" : "button filter"
                             }
                         >
                             Active
@@ -48,7 +48,7 @@ function Buttons() {
                             className={
                                 darkMode
                                     ? "button filter dark"
-                                    : "button filter"
+                                    : filter === 'Completed' ? "button filter active-filter" : "button filter"
                             }
                         >
                             Completed

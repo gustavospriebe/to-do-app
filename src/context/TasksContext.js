@@ -4,6 +4,7 @@ const TasksContext = createContext();
 
 function TasksProvider({ children }) {
     const [tasks, setTasks] = useState([]);
+    const [filter, setFilter] = useState('All');
 
     const createTasks = (value) => {
         setTasks((prevState) => [
@@ -15,7 +16,11 @@ function TasksProvider({ children }) {
         ]);
     };
 
-    // const
+    const completeTasks = (task) => {
+        const newTasks = [...tasks];
+        newTasks[task].completed = !tasks[task].completed;
+        setTasks(newTasks);
+    };
 
     const deleteTasks = (taskToDelete) => {
         tasks.splice(taskToDelete, 1);
@@ -25,8 +30,12 @@ function TasksProvider({ children }) {
         setTasks(newTasks);
     };
 
-    const deleteAllTasks = (taskToDelete) => {
-        setTasks([]);
+    const deleteAllTasks = () => {
+        setTasks(tasks.filter((task) => task.completed !== true));
+    };
+
+    const getFilter = (event) => {
+        setFilter(event);
     };
 
     return (
@@ -37,6 +46,9 @@ function TasksProvider({ children }) {
                     deleteTasks,
                     deleteAllTasks,
                     tasks,
+                    completeTasks,
+                    getFilter,
+                    filter,
                 }}
             >
                 {children}

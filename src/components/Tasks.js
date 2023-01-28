@@ -8,8 +8,8 @@ function Tasks() {
     const { tasks } = useContext(TasksContext);
     const { darkMode } = useContext(DarkModeContext);
 
-    console.log(tasks);
-
+    
+  
     return (
         <div className="tasks">
             {tasks.map((task, index) => (
@@ -17,7 +17,6 @@ function Tasks() {
                     key={`${task}.${index}`}
                     task={task}
                     index={index}
-                    tasks={tasks}
                     darkMode={darkMode}
                 />
             ))}

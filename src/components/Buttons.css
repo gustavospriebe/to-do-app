@@ -1,25 +1,44 @@
 .buttons {
     display: flex;
     margin: 0 auto;
+    justify-content: space-between;
     background-color: #fff;
     width: 100%;
 }
 
 .dark {
     background-color: hsl(237, 14%, 26%);
-    color: hsl(235, 18%, 59%);
+    color: hsl(234, 21%, 63%);
 }
 
 .button {
-    width: 100%;
-    font-size: 0.7rem;
-    padding: 0.7rem;
+    /* width: 100%; */
+    font-size: 0.5rem;
+    padding: 0.8rem;
+}
+
+.filter {
+    cursor: pointer;
 }
 
 .clean:hover {
     cursor: pointer;
 }
 
+.filter-options {
+    display: flex;
+    align-items: center;
+}
+
+.filter-options > p {
+    font-size: 0.5rem;
+    padding: 6px;
+}
+
+.filter-options > p.dark {
+    font-size: 0.5rem;
+    padding: 6px;
+}
 /* @media (max-width: 450px) {
     .buttons {
         width: 80%;

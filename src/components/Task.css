@@ -36,6 +36,7 @@
 }
 
 button {
+    cursor: pointer;
     padding: 10px;
     margin-right: 8px;
     border-radius: 50%;
@@ -48,36 +49,29 @@ button.dark {
 }
 
 /*  Botão clicado */
-/* button.completed, button.completed.dark {
-    cursor: pointer;
+button.completed,
+button.completed.dark {
     background-repeat: no-repeat;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    background-image: url("../assets/icon-check.svg"), linear-gradient(hsl(192, 100%, 67%, .9) , hsl(280, 87%, 65%, 0.9));
+    background-image: url("../assets/icon-check.svg"),
+        linear-gradient(hsl(192, 100%, 67%, 0.9), hsl(280, 87%, 65%, 0.9));
     background-position: center;
-} */
-
-/* Botão hover */
-button:hover,
-button.dark:hover {
-    cursor: pointer;
-
-    border-radius: 50px; /*1*/
-    border: 2px solid transparent; /*2*/
-    background: linear-gradient(
-            hsl(192, 100%, 67%, 0.9),
-            hsl(280, 87%, 65%, 0.9)
-        )
-        border-box; /*3*/
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor; /*5'*/
-    mask-composite: exclude; /*5*/
 }
 
-input, .task-text {
-    width: 100%;
+p.completed {
+    color: hsla(235, 19%, 35%, 0.342);
+    text-decoration: line-through;
+}
 
+p.completed.dark {
+    color: hsla(235, 18%, 59%, 0.342);
+    text-decoration: line-through;
+}
+
+input,
+.task-text {
+    width: 100%;
 }
 
 input,

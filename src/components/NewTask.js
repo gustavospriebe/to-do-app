@@ -30,7 +30,7 @@ function Task() {
                     : "task-container new-task"
             }
         >
-            <button className={darkMode ? "dark" : ""}></button>
+            {/* <button className={darkMode ? "dark" : ""}></button> */}
             <form
                 className={darkMode ? "dark form" : "form"}
                 onSubmit={handleSubmit}

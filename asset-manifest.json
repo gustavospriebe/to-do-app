@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/to-do-app/static/css/main.552d02c6.css",
-    "main.js": "/to-do-app/static/js/main.d2cf7f42.js",
+    "main.css": "/to-do-app/static/css/main.bea0c623.css",
+    "main.js": "/to-do-app/static/js/main.55d98e38.js",
     "static/media/bg-desktop-light.jpg": "/to-do-app/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
     "static/media/bg-desktop-dark.jpg": "/to-do-app/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "static/media/github-darkmode.png": "/to-do-app/static/media/github-darkmode.a7d6628925d801db78ee.png",
+    "static/media/github.png": "/to-do-app/static/media/github.9ecff1926043ffb5faeb.png",
+    "static/media/code-darkmode.png": "/to-do-app/static/media/code-darkmode.9dbec8c78a73cf6e4014.png",
+    "static/media/linkedin-darkmode.png": "/to-do-app/static/media/linkedin-darkmode.97fd60da7d461b9bdd1c.png",
     "static/media/icon-sun.svg": "/to-do-app/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
     "index.html": "/to-do-app/index.html",
     "static/media/icon-moon.svg": "/to-do-app/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
     "static/media/icon-cross.svg": "/to-do-app/static/media/icon-cross.6ee81d30b75cab19d6f7314624fcc4d6.svg",
     "static/media/icon-check.svg": "/to-do-app/static/media/icon-check.a8fb15d0278c8e312df5.svg",
-    "main.552d02c6.css.map": "/to-do-app/static/css/main.552d02c6.css.map",
-    "main.d2cf7f42.js.map": "/to-do-app/static/js/main.d2cf7f42.js.map"
+    "main.bea0c623.css.map": "/to-do-app/static/css/main.bea0c623.css.map",
+    "main.55d98e38.js.map": "/to-do-app/static/js/main.55d98e38.js.map"
   },
   "entrypoints": [
-    "static/css/main.552d02c6.css",
-    "static/js/main.d2cf7f42.js"
+    "static/css/main.bea0c623.css",
+    "static/js/main.55d98e38.js"
   ]
 }

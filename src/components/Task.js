@@ -7,7 +7,6 @@ function Task({ task, index, darkMode }) {
     const { deleteTasks, completeTasks, filter } = useContext(TasksContext);
 
     const filterTasks = () => {
-        console.log(filter)
         if (task.completed && filter === "Completed") {
             return { display: "flex" };
         }

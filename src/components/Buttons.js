@@ -2,12 +2,13 @@ import { useContext } from "react";
 import { DarkModeContext } from "../context/DarkMode";
 import { TasksContext } from "../context/TasksContext";
 import "./Buttons.css";
-import classNames from "classnames";
 
 function Buttons() {
     const { tasks, deleteAllTasks, getFilter, filter } =
         useContext(TasksContext);
     const { darkMode } = useContext(DarkModeContext);
+
+    const buttons = ["All", "Active", "Completed"];
 
     return (
         <>
@@ -22,30 +23,16 @@ function Buttons() {
                             darkMode ? "filter-options dark" : "filter-options"
                         }
                     >
-                        <p
-                            onClick={(e) => getFilter(e.target.innerHTML)}
-                            className={`button filter ${
-                                darkMode ? "dark" : ""
-                            } ${filter === "All" ? "active-filter" : ""}`}
-                        >
-                            All
-                        </p>
-                        <p
-                            onClick={(e) => getFilter(e.target.innerHTML)}
-                            className={`button filter ${
-                                darkMode ? "dark" : ""
-                            } ${filter === "Active" ? "active-filter" : ""}`}
-                        >
-                            Active
-                        </p>
-                        <p
-                            onClick={(e) => getFilter(e.target.innerHTML)}
-                            className={`button filter ${
-                                darkMode ? "dark" : ""
-                            } ${filter === "Completed" ? "active-filter" : ""}`}
-                        >
-                            Completed
-                        </p>
+                        {buttons.map((button) => (
+                            <p
+                                onClick={(e) => getFilter(e.target.innerHTML)}
+                                className={`button filter ${
+                                    darkMode ? "dark" : ""
+                                } ${filter === button ? "active-filter" : ""}`}
+                            >
+                                {button}
+                            </p>
+                        ))}
                     </div>
                     <p
                         onClick={() => deleteAllTasks()}

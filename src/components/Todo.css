@@ -2,8 +2,9 @@
 .App-dark {
     background-repeat: no-repeat;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
 }
 
 .App {
@@ -14,6 +15,14 @@
 .App-dark {
     background-image: url("../assets/bg-desktop-dark.jpg");
     background-color: hsl(233, 22%, 14%);
+}
+
+
+
+.dnd {
+    font-size: 0.6rem;
+    padding: 1.2rem;
+    text-align: center;
 }
 
 @media (min-width: 1440px) {

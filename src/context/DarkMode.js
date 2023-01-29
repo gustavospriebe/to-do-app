@@ -7,8 +7,6 @@ function DarkModeProvider({ children }) {
 
     const toggleDarkMode = () => setDarkModes(!darkMode);
 
-    console.log(darkMode);
-
     return (
         <div>
             <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>

@@ -17,6 +17,7 @@ function Todo() {
                     <Header />
                     <NewTask />
                     <Container />
+                    <p className="dnd">Drag and drop to reorder the list</p>
                     <Footer />
                 </TasksProvider>
             </div>

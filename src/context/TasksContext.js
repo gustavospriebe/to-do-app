@@ -4,7 +4,7 @@ const TasksContext = createContext();
 
 function TasksProvider({ children }) {
     const [tasks, setTasks] = useState([]);
-    const [filter, setFilter] = useState('All');
+    const [filter, setFilter] = useState("All");
 
     const createTasks = (value) => {
         setTasks((prevState) => [
@@ -36,7 +36,6 @@ function TasksProvider({ children }) {
 
     const getFilter = (event) => {
         setFilter(event);
-        
     };
 
     return (

@@ -1,4 +1,3 @@
-import "./App.css";
 import { DarkModeProvider } from "./context/DarkMode";
 import Todo from "./components/Todo";
 

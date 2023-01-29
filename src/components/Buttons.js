@@ -25,6 +25,7 @@ function Buttons() {
                     >
                         {buttons.map((button) => (
                             <p
+                                key={button}
                                 onClick={(e) => getFilter(e.target.innerHTML)}
                                 className={`button filter ${
                                     darkMode ? "dark" : ""

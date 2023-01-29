@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { DarkModeContext } from "../context/DarkMode";
 import { TasksContext } from "../context/TasksContext";
 import Task from "./Task";

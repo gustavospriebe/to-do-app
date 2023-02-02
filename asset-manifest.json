@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/to-do-app/static/css/main.bea0c623.css",
-    "main.js": "/to-do-app/static/js/main.55d98e38.js",
+    "main.css": "/to-do-app/static/css/main.13598f8f.css",
+    "main.js": "/to-do-app/static/js/main.e05a61f9.js",
     "static/media/bg-desktop-light.jpg": "/to-do-app/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
     "static/media/bg-desktop-dark.jpg": "/to-do-app/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
     "static/media/github-darkmode.png": "/to-do-app/static/media/github-darkmode.a7d6628925d801db78ee.png",
@@ -13,11 +13,11 @@
     "static/media/icon-moon.svg": "/to-do-app/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
     "static/media/icon-cross.svg": "/to-do-app/static/media/icon-cross.6ee81d30b75cab19d6f7314624fcc4d6.svg",
     "static/media/icon-check.svg": "/to-do-app/static/media/icon-check.a8fb15d0278c8e312df5.svg",
-    "main.bea0c623.css.map": "/to-do-app/static/css/main.bea0c623.css.map",
-    "main.55d98e38.js.map": "/to-do-app/static/js/main.55d98e38.js.map"
+    "main.13598f8f.css.map": "/to-do-app/static/css/main.13598f8f.css.map",
+    "main.e05a61f9.js.map": "/to-do-app/static/js/main.e05a61f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.bea0c623.css",
-    "static/js/main.55d98e38.js"
+    "static/css/main.13598f8f.css",
+    "static/js/main.e05a61f9.js"
   ]
 }

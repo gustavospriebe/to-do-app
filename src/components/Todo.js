@@ -17,7 +17,7 @@ function Todo() {
                     <Header />
                     <NewTask />
                     <Container />
-                    <Footer />
+                    {/* <Footer /> */}
                 </TasksProvider>
             </div>
         </>

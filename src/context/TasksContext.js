@@ -1,10 +1,20 @@
 import { createContext, useState } from "react";
+import { useEffect } from "react";
 
 const TasksContext = createContext();
 
+function getInitialState() {
+    const tasks = localStorage.getItem("tasks");
+    return tasks ? JSON.parse(tasks) : [];
+}
+
 function TasksProvider({ children }) {
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState(getInitialState);
     const [filter, setFilter] = useState("All");
+
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
 
     const createTasks = (value) => {
         setTasks((prevState) => [

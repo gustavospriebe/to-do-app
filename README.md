@@ -1,70 +1,138 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/gustavospriebe/to-do-app?color=%2304D361">
 
-In the project directory, you can run:
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/gustavospriebe/to-do-app">
 
-### `npm start`
+  <a href="https://www.twitter.com/gustavospriebe/">
+    <img alt="Siga no Twitter" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Ftgmarinho%2FREADME-ecoleta">
+  </a>
+  
+  <a href="https://github.com/gustavospriebe/to-do-app/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gustavospriebe/to-do-app">
+  </a>
+    
+   <a href="https://github.com/gustavospriebe/to-do-app/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/gustavospriebe/to-do-app?style=social">
+  </a> 
+</p>
+<h1 align="center">
+    To-Do-App
+</h1>
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-autor">Autor</a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 💻 Sobre o projeto
 
-### `npm test`
+To-Do-App - é um organizador de atividades a fazer para uso cotidiano. Foi utilizado o layout disponibilizado pela Front End Mentor para iniciar o projeto e estão sendo feitas melhorias ao longo do tempo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Funcionalidades
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [x] Criar layout do protótipo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [x] Criar novas tarefas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [x] Deletar tarefas
 
-### `npm run eject`
+- [x] Marcar tarefas como completadas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [x] Limpar tarefas completadas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [x] Filtrar por status da tarefa
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [x] Salvar tarefas no localStorage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [x] Dark Mode
 
-## Learn More
+- [x] Responsividade
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Melhorias
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [ ] Drag and Drop
 
-### Code Splitting
+- [ ] Criar categorização de atividades
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [ ] Implementar Login
 
-### Analyzing the Bundle Size
+- [ ] Remover armazenamento localStorage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [ ] Conectar com PostgreSQL
 
-### Making a Progressive Web App
+- [ ] Adicionar descrições das atividades e mostrar em pop-up
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [ ] Contagem de dias da criação até a finalização da task
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🚀 Como executar o projeto
 
-### Deployment
+### Pré-requisitos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### 🧭 Rodando a aplicação web (Frontend)
+
+```bash
+
+# Clone este repositório
+$ git clone git@github.com:gustavospriebe/to-do-app.git
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd to-do-app
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run start
+
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+
+```
+
+---
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+#### **Website**  ([React](https://reactjs.org/) )
+
+-   **[Context API](https://reactjs.org/docs/context.html)**
+-   **[State Management](https://beta.reactjs.org/learn/managing-state)**
+-   **[Local Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage)**
+
+> Veja o arquivo  [package.json](https://github.com/gustavospriebe/to-do-app/package.json)
+
+
+#### [](https://github.com/gustavospriebe/to-do-app#utilit%C3%A1rios)**Utilitários**
+
+-   Protótipo:  **[Front End Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW)** 
+-   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**  
+-   Fontes:  **[Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)**
+
+
+---
+
+##  Autor
+
+<a href="https://gustavospriebe.tech/">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/40157345?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Gustavo Priebe</b></sub></a>
+ <br />
+
+[![Twitter Badge](https://img.shields.io/badge/-@gustavospriebe-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/gustavospriebe)](https://twitter.com/gustavospriebe) [![Linkedin Badge](https://img.shields.io/badge/-Gustavo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gustavospriebe/)](https://www.linkedin.com/in/gustavospriebe/) 
+[![Gmail Badge](https://img.shields.io/badge/-gustavo_priebe@hotmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:gustavo_priebe@hotmail.com)](mailto:gustavo_priebe@hotmail.com)

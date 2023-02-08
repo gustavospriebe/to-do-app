@@ -114,7 +114,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[State Management](https://beta.reactjs.org/learn/managing-state)**
 -   **[Local Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage)**
 
-> Veja o arquivo  [package.json](https://github.com/gustavospriebe/to-do-app/package.json)
+> Veja o arquivo  [package.json](https://github.com/gustavospriebe/to-do-app/blob/master/package.json)
 
 
 #### [](https://github.com/gustavospriebe/to-do-app#utilit%C3%A1rios)**Utilitários**
